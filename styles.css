@@ -1,0 +1,336 @@
+/* Rice Network - Minecraft Server Styles */
+
+:root {
+    --mc-green: #5D8C22;
+    --mc-dark-green: #3D5E12;
+    --mc-brown: #8B6914;
+    --mc-dirt: #6B4226;
+    --mc-gold: #FFD700;
+    --mc-dark-bg: #1a1a1a;
+    --mc-card-bg: #2a2a2a;
+    --mc-text: #e0e0e0;
+    --mc-discord: #5865F2;
+    --mc-red: #FF4444;
+    --mc-dark-red: #8B0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--mc-text);
+    min-height: 100vh;
+    line-height: 1.8;
+    background: 
+        linear-gradient(rgba(10, 15, 30, 0.85), rgba(5, 10, 20, 0.9)),
+        url('https://wallpapercave.com/wp/wp2754864.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.profile-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(61, 94, 18, 0.9), rgba(107, 66, 38, 0.9));
+    border: 4px solid var(--mc-brown);
+    box-shadow: 0 8px 0 rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.server-icon-large {
+    font-size: 4em;
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 0 #000;
+}
+
+.username {
+    font-size: 2.5em;
+    color: var(--mc-gold);
+    text-shadow: 4px 4px 0 #000;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.ip-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--mc-gold);
+    padding: 15px 30px;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.5);
+}
+
+.ip-label {
+    font-size: 0.6em;
+    color: var(--mc-gold);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.ip-address {
+    font-size: 1em;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 1px;
+}
+
+/* Cards */
+.card {
+    background: rgba(42, 42, 42, 0.95);
+    border: 4px solid var(--mc-brown);
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    height: 4px;
+    background: var(--mc-green);
+}
+
+.card h2 {
+    color: var(--mc-gold);
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 0 #000;
+    border-bottom: 3px dashed var(--mc-brown);
+    padding-bottom: 15px;
+}
+
+/* Friends I HATE Section */
+.hate-section {
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.95) 0%, rgba(60, 10, 10, 0.95) 100%);
+    border-color: var(--mc-red);
+}
+
+.hate-section::before {
+    background: var(--mc-red);
+}
+
+.hate-section h2 {
+    color: var(--mc-red);
+    border-bottom-color: var(--mc-red);
+}
+
+.hate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hate-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--mc-dark-red);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.hate-item:hover {
+    transform: translateX(10px);
+    border-color: var(--mc-red);
+}
+
+.hate-skull {
+    font-size: 1.5em;
+}
+
+.hate-name {
+    font-size: 0.9em;
+    color: #ff8888;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 2px;
+}
+
+/* Discord Section */
+.discord-section {
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    border-color: var(--mc-discord);
+}
+
+.discord-section::before {
+    background: var(--mc-discord);
+}
+
+.discord-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.discord-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--mc-discord);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+}
+
+.discord-logo svg {
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.discord-info {
+    text-align: left;
+}
+
+.discord-label {
+    font-size: 0.7em;
+    color: var(--mc-discord);
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.discord-username {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 2px;
+}
+
+/* Skills Section */
+.skills-section {
+    background: linear-gradient(135deg, rgba(42, 42, 42, 0.95) 0%, rgba(20, 30, 60, 0.95) 100%);
+    border-color: var(--mc-gold);
+}
+
+.skills-section::before {
+    background: var(--mc-gold);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--mc-brown);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.skill-row:hover {
+    transform: translateX(5px);
+    border-color: var(--mc-gold);
+}
+
+.skill-name {
+    font-size: 0.85em;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    letter-spacing: 1px;
+}
+
+.ht-badge {
+    font-size: 0.8em;
+    padding: 8px 16px;
+    border: 2px solid;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 0 3px 0 rgba(0,0,0,0.5);
+}
+
+.ht-badge.ht3 {
+    background: rgba(255, 165, 0, 0.2);
+    border-color: #FFA500;
+    color: #FFA500;
+}
+
+.ht-badge.ht4 {
+    background: rgba(255, 68, 68, 0.2);
+    border-color: var(--mc-red);
+    color: var(--mc-red);
+}
+
+.ht-badge.ht5 {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: #00FFFF;
+    color: #00FFFF;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.7em;
+    color: #999;
+    border-top: 2px dashed var(--mc-brown);
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.server-icon-large {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.ip-badge {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px var(--mc-red); }
+    50% { box-shadow: 0 0 20px var(--mc-red), 0 0 40px var(--mc-red); }
+}
+
+.hate-item:hover {
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .username { font-size: 1.8em; }
+    .ip-address { font-size: 0.8em; }
+    .discord-content { flex-direction: column; text-align: center; }
+    .discord-info { text-align: center; }
+    .hate-item { padding: 15px; }
+    .hate-name { font-size: 0.75em; }
+}
+
